@@ -1,0 +1,264 @@
+,
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tembo Madalitso</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo2.png" alt="" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about ">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><i class="fa-solid fa-xmark" onclick="closemenu()"></i></li>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="headeer-text">
+                <p>Cybersecurity | Cloud Forensics | Software Development</p>
+                <h1>Hi, I'm <span class="tembo">Tembo</span><br><span class="mad">Madalitso</span> From Zambia</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--About-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/me.jpeg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                          Hi there! I'm Tembo Madalitso, a Computer Science graduate from <strong>Mulungushi University</strong>. 
+  With a strong passion for <b>cybersecurity, cloud computing, and software development</b>, I thrive on solving 
+  complex problems that demand innovative solutions.  
+
+  Over the years, I’ve built expertise in <b>web development</b> using HTML, CSS, JavaScript, and backend technologies, 
+  while also advancing into <b>cloud forensics and security frameworks</b>.  
+
+  I previously served as the <strong>President of the ICTAZ Mulungushi University Chapter</strong>, where I led initiatives 
+  to foster growth, collaboration, and innovation among ICT students. My experiences in <b>hackathons, Capture The Flag competitions, 
+  and digital forensics research</b> continue to fuel my ambition to contribute meaningfully to the global tech space.  
+
+  Today, I am focused on leveraging both my <b>technical expertise and leadership experience</b> to build impactful 
+  solutions in cybersecurity, AI-driven systems, and scalable cloud applications.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX Design</span><br>Crafting intuitive and aesthetically pleasing web and app
+                                interfaces that enhance user experience.</li>
+                            <li><span>Web Development</span><br>Developing responsive and dynamic websites and web
+                                applications using HTML, CSS, JavaScript, and backend technologies.</li>
+                            <!--<li><span>App Development</span><br>Building scalable and efficient Android and iOS
+                                applications tailored to user needs.</li> --->
+                            <li><span>Cybersecurity</span><br>Continuously developing expertise in digital forensics, penetration testing, defensive strategies, and ethical hacking to strengthen system and network security.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="experience">
+                        <ul>
+    <li><span>2025–Present</span><br><strong>Data Analyst Intern – Zambia Sugar</strong><br>
+      Currently interning as a Data Analyst, where I apply data cleaning, visualization, and statistical techniques 
+      to support business decision-making and improve operational efficiency.
+    </li>
+
+    <li><span>2025</span><br><strong>ZAMREN Hackathon – Cyber-Guardian Project</strong><br>
+      Co-developed a multi-vector cybersecurity system featuring IDS, email/SMS spam detection, 
+      a threat dashboard, and user awareness modules. Focused on design and prototype validation.
+    </li>
+
+    <li><span>2024–2025</span><br><strong>President – ICTAZ Mulungushi University Chapter</strong><br>
+      Led initiatives to promote professional development among ICT students, organized inter-university 
+      competitions, hackathons, and represented student interests to ICTAZ.
+    </li>
+
+    <li><span>2024</span><br><strong>SecureOurWorld CTF Participant</strong><br>
+      Gained hands-on experience in digital forensics, steganography, and network analysis, 
+      contributing to a top-five team placement.
+    </li>
+
+    <li><span>Other</span><br><strong>Web Development Projects</strong><br>
+      Designed and developed interactive web solutions, An Appointment Booking System for a local clinic and a Personal Portfolio,
+      utilizing HTML, CSS, JavaScript, and backend technologies to enhance user engagement.
+    </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>2021-Present</span><br><strong>Bachelor of Science in Computer
+                                    Science</strong><br>Mulungushi University<br>Focusing on software development, cloud
+                                computing, cybersecurity, and AI.</li>
+                            <li><span>2015-2019</span><br><strong>Secondary Education</strong><br>Nakambala Private
+                                School<br>Graduated with a strong foundation in science and mathematics, earning
+                                excellent results.</li>
+                            <li><span>2008-2014</span><br><strong>Primary Education</strong><br>Nakambala Private
+                                School<br>Achieved academic excellence and developed early interest in technology.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I specialize in creating responsive, visually appealing, and user-friendly websites tailored to
+                        meet your specific needs. Whether it's a personal portfolio, business website, or e-commerce
+                        platform, I ensure a seamless design process from concept to deployment.</p>
+                    <a href="#portfolio">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>With a focus on user-centric design, I craft intuitive interfaces that enhance the user
+                        experience. From wireframes to high-fidelity prototypes, I deliver designs that are not only
+                        functional but also aesthetically pleasing.</p>
+                    <a href="#portfolio">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h2>Cybersecurity</h2>
+                    <p>Protecting your digital assets is my priority. I offer services in vulnerability assessments,
+                        penetration testing, and defensive strategies to safeguard your systems and networks against
+                        cyber threats.</p>
+                    <a href="#portfolio">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Portfolio Section -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <!-- Project 1 -->
+            <div class="work">
+                <img src="images/luax.png" alt="Clinic Appointment System">
+                <div class="layer">
+                    <h3>Clinic Appointment Booking System</h3>
+                    <p>A Flask-based web application for a local clinic that allows patients to book appointments online. 
+                       The system also doubles as a portfolio website for the clinic. Currently hosted on PythonAnywhere.</p>
+                    <a href="https://madalitsot.pythonanywhere.com" target="_blank">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="work">
+                <img src="images/guardian.png" alt="Cyber-Guardian IDS">
+                <div class="layer">
+                    <h3>ZAMREN Hackathon Project – Cyber-Guardian</h3>
+                    <p>A collaborative project built for the ZAMREN Hackathon. The system integrates intrusion detection, 
+                       email/SMS spam detection, and a security dashboard. Source code is available on GitHub.</p>
+                    <a href="https://github.com/cyber-Je-di/ids_test.git" target="_blank">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="work">
+                <img src="images/madalitso.png" alt="Portfolio Website">
+                <div class="layer">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>This portfolio itself — designed and developed to showcase my skills, projects, and experience. 
+                       Built with HTML, CSS, and JavaScript, with plans for future expansion.</p>
+                    <a href="#">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/cyber-Je-di" class="btn" target="_blank">See more...</a>
+    </div>
+</div>
+
+
+
+<!-- Contact -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <!-- Clickable Email -->
+                <p>
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <a href="mailto:tembomadalito9@gmail.com">tembomadalito9@gmail.com</a>
+                </p>
+                <!-- Clickable Phone -->
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+260972566320">+260 97 2566320</a> / 
+                    <a href="tel:+260950020540">+260 95 0020540</a>
+                </p>
+                <!-- Social Icons with WhatsApp -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/madalitso10" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://github.com/cyber-Je-di" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                    <a href="https://www.linkedin.com/in/madalitso-tembo-0b1434259/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <!-- WhatsApp Link -->
+                    <a href="https://wa.me/260972566320" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <a class="btn btn2" href="../images/myResume.pdf" download>My Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" placeholder="Your Message" rows="6"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright <i class="fa-solid fa-copyright"></i> Tembo Madalitso <i class="fa-solid fa-trademark"></i></p>
+        </div>
+    </div>
+</div>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/260972566320" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- Scroll to Top Button -->
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+      
+        <script src="js/script.js"></script>
+</body>
+
+</html>

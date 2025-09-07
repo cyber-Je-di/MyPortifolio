@@ -389,6 +389,49 @@ nav .fa-solid {
   display: none;
 }
 
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    z-index: 1000;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+.whatsapp-float:hover {
+    transform: scale(1.2);
+}
+
+/* Scroll-to-top Button */
+#scrollTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 1000;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    background-color: #ff004f;
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+#scrollTopBtn:hover {
+    transform: scale(1.2);
+}
+
+
 /*---Rresposiveness for small screens---*/
 
 @media only screen and (max-width: 600px) {

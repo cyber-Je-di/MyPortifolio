@@ -36,6 +36,21 @@ form.addEventListener('submit', e => {
                 msg.innerHTML = "";
             }, 5000);
             form.reset();
-        }) // Close the .then block properly
+        })
         .catch(error => console.error('Error!', error.message));
 });
+
+// Scroll-to-top button
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.onscroll = function () {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollTopBtn.style.display = "block";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+};
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
