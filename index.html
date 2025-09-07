@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tembo Madalitso</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,7 +15,8 @@
 
 <body>
     <div id="header">
-        <div class="container">
+        <div id="particles-js"></div>
+        <div class="container header-container">
             <nav>
                 <img src="images/logo2.png" alt="" class="logo">
                 <ul id="sidemenu">
@@ -29,13 +31,13 @@
             </nav>
             <div class="headeer-text">
                 <p>Cybersecurity | Cloud Forensics | Software Development</p>
-                <h1>Hi, I'm <span class="tembo">Tembo</span><br><span class="mad">Madalitso</span> From Zambia</h1>
+                <h1>Hi, I'm <span class="tembo" id="typed"></span></h1>
             </div>
         </div>
     </div>
 
     <!--About-->
-    <div id="about">
+    <div id="about" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
@@ -128,7 +130,7 @@
         <div class="container">
             <h1 class="sub-title">My Services</h1>
             <div class="services-list">
-                <div>
+                <div data-aos="fade-up" data-aos-delay="100">
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Design</h2>
                     <p>I specialize in creating responsive, visually appealing, and user-friendly websites tailored to
@@ -136,7 +138,7 @@
                         platform, I ensure a seamless design process from concept to deployment.</p>
                     <a href="#portfolio">Learn More</a>
                 </div>
-                <div>
+                <div data-aos="fade-up" data-aos-delay="200">
                     <i class="fa-solid fa-crop-simple"></i>
                     <h2>UI/UX Design</h2>
                     <p>With a focus on user-centric design, I craft intuitive interfaces that enhance the user
@@ -144,7 +146,7 @@
                         functional but also aesthetically pleasing.</p>
                     <a href="#portfolio">Learn More</a>
                 </div>
-                <div>
+                <div data-aos="fade-up" data-aos-delay="300">
                     <i class="fa-solid fa-shield-halved"></i>
                     <h2>Cybersecurity</h2>
                     <p>Protecting your digital assets is my priority. I offer services in vulnerability assessments,
@@ -162,7 +164,7 @@
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
             <!-- Project 1 -->
-            <div class="work">
+            <div class="work" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="25" data-tilt-speed="400" data-tilt-perspective="500">
                 <img src="images/luax.png" alt="Clinic Appointment System">
                 <div class="layer">
                     <h3>Clinic Appointment Booking System</h3>
@@ -174,7 +176,7 @@
                 </div>
             </div>
             <!-- Project 2 -->
-            <div class="work">
+            <div class="work" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="25" data-tilt-speed="400" data-tilt-perspective="500">
                 <img src="images/guardian.png" alt="Cyber-Guardian IDS">
                 <div class="layer">
                     <h3>ZAMREN Hackathon Project – Cyber-Guardian</h3>
@@ -186,7 +188,7 @@
                 </div>
             </div>
             <!-- Project 3 -->
-            <div class="work">
+            <div class="work" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="25" data-tilt-speed="400" data-tilt-perspective="500">
                 <img src="images/madalitso.png" alt="Portfolio Website">
                 <div class="layer">
                     <h3>Personal Portfolio Website</h3>
@@ -205,7 +207,7 @@
 
 
 <!-- Contact -->
-<div id="contact">
+<div id="contact" data-aos="fade-up">
     <div class="container">
         <div class="row">
             <div class="contact-left">
@@ -257,8 +259,11 @@
     <i class="fa-solid fa-arrow-up"></i>
 </button>
 
-      
-        <script src="js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+        <script src="js/main.js"></script>
 </body>
 
 </html>
