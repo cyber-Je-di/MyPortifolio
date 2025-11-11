@@ -64,19 +64,58 @@ nav ul li a:hover::after {
 }
 
 .headeer-text {
-  margin-top: 20%;
   font-size: 30px;
   color: #fff;
   animation: slideInLeft 2s forwards 0.2s;
 }
 
+#tagline {
+  font-size: 20px;
+  color: #fff;
+  margin-top: 10px;
+}
+
 .headeer-text h1 {
   font-size: 60px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .headeer-text h1 span {
   color: #ff004f;
+}
+
+/* NEW: Styling for the container to hold the three videos */
+.intro-icons-container {
+    display: flex;
+    justify-content: center; /* Centers the videos horizontally */
+    align-items: center;
+    gap: 20px; /* Space between the videos */
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 10;
+    padding: 15px;
+}
+/* NEW: Styling for the Animated Introduction Icon */
+.intro-icon {
+    width: 200px; /* Large enough to be seen */
+    height: 200px;
+    display: block; 
+    margin-left: 0; /* Center the icon */
+    margin-right: auto; /* Center the icon */
+    /* Ensure the icon is above the particles.js layer */
+    position: relative; 
+    z-index: 10;
+    padding: 10px;
+}
+/* NEW: Styling for the individual video elements */
+.intro-icon-video {
+    width: 200px; /* Smaller size for three side-by-side */
+    height: 200px;
+    background-color: transparent; 
+    border-radius: 5px; 
+    /* Set max width to ensure they shrink on very small screens */
+    max-width: 100%; 
+    padding: 10px;
 }
 
 @keyframes slideInLeft {

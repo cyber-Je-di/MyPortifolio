@@ -13,6 +13,19 @@
   .headeer-text h1 {
     font-size: 30px;
   }
+/* Styling for the Animated Introduction Video (replaces .intro-icon) */
+.intro-icon-video {
+    width: 80px; /* Slightly larger for better video quality */
+    height: 80px;
+}
+.intro-icon{
+    width: 80px;
+    height: 80px;
+}
+
+.intro-icons-container {
+    gap: 10px; /* Space between the videos */
+}
 
   nav .fa-solid {
     display: block;
@@ -88,4 +101,18 @@
     width: 28px;
     height: 28px;
   }
+
+/* Styling for the Animated Introduction Video (replaces .intro-icon) */
+.intro-icon-video {
+    width: 80px; /* Slightly larger for better video quality */
+    height: 80px;
+}
+.intro-icon{
+    width: 80px;
+    height: 80px;
+}
+
+.intro-icons-container {
+    gap: 10px; /* Space between the videos */
+}
 }
