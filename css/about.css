@@ -14,16 +14,16 @@
   transition: transform 0.6s, box-shadow 0.6s;
 }
 
+/* NEW: Image Hover Effect - Lift and Glow */
+.about-col-1:hover img {
+  transform: translateY(-5px) scale(1.02); /* Lift and slightly enlarge */
+  box-shadow: 0 10px 20px rgba(255, 0, 79, 0.5); /* Subtle glowing effect */
+}
+
 .about-col-2 {
   flex-basis: 60%;
   /* NEW: Add smooth transition for hover effects */
   transition: transform 0.3s, box-shadow 0.3s;
-}
-
-/* NEW: Image Hover Effect - Lift and Glow */
-.about-col-1:hover img {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 10px 20px rgba(255, 0, 79, 0.5); /* Subtle glowing effect */
 }
 
 /* NEW: Text Column Hover Effect - Subtle Slide */
@@ -31,6 +31,7 @@
   transform: translateX(5px);
   box-shadow: -5px 0 15px rgba(255, 0, 79, 0.1); /* Subtle side shadow */
 }
+
 
 .tab-titles {
   display: flex;
