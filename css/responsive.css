@@ -1,44 +1,41 @@
 @media only screen and (max-width: 600px) {
+  
+  /* FIX 1: Restore a safe header height to prevent content clipping */
+  #header {
+      height: 75vh; 
+  }
+
+  /* FIX 2: Push the header content down to clear the navigation bar */
   .headeer-text {
-    margin-top: 10px;
+    margin-top: 15%; 
     font-size: 16px;
     color: #fff;
   }
 
-  #header {
-      height: 30vh; 
-  }
-
-  #header h1 {
-     margin: 5px; 
-  }
-
-  #particles-js {
-    margin: 10px;
-  }
-  .whatsapp-float {
-    width: 28px;
-    height: 28px;
-  }
-
   .headeer-text h1 {
     font-size: 30px;
-    margin-top: 35%;
+    margin-top: 5px; 
   }
-
-/* RESPONSIVE: Shrink video size for mobile */
+  
+  /* FIX 3: Shrink icons to fit three side-by-side comfortably */
   .intro-icons-container {
-      /* ADD: Ensure mobile layout is also left-aligned */
+      /* Keep left-aligned */
       justify-content: flex-start; 
-      gap: 15px; /* Reduce gap between videos */
-      margin-bottom: 10px; /* Reduce margin on mobile */
+      gap: 15px; 
+      margin-bottom: 10px;
   }
 
   .intro-icon-video, .intro-icon {
-      width: 100px; /* Smaller size for mobile screens */
-      height: 100px;
+      width: 60px; /* Safer size for three side-by-side on mobile */
+      height: 60px;
       border-radius: 50%;
+  }
+  
+  /* The rest of your existing responsive styles are included below */
 
+  .whatsapp-float {
+    width: 28px;
+    height: 28px;
   }
 
   nav .fa-solid {
@@ -102,7 +99,6 @@
 
   .copyright {
     font-size: 14px;
-    margin: 5px 0 5px 0;
   }
 }
 
@@ -132,7 +128,7 @@
   }
 
     #header {
-      height: 30vh; 
+      height: 70vh; 
   }
 
    .headeer-text h1 {
