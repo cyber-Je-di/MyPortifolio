@@ -26,6 +26,21 @@ window.opentab = function (tabname, ele) {
 }
 // ----------------------------------------------------------------------
 
+// ----------------------------------------------------------------------
+// 2. SIDEMENU FUNCTIONS (MOVED TO GLOBAL SCOPE FOR HTML ONCLICK)
+// ----------------------------------------------------------------------
+var sidemenu = document.getElementById("sidemenu");
+// Check if sidemenu element exists before defining functions that use it
+if (sidemenu) {
+    window.openmenu = function () {
+        sidemenu.style.right = "0";
+    }
+    window.closemenu = function () {
+        sidemenu.style.right = "-200px";
+    }
+}
+// ----------------------------------------------------------------------
+
 
 document.addEventListener("DOMContentLoaded", function () {
     // Typed.js initialization
@@ -163,15 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "retina_detect": true
     });
 
-
-    // Sidemenu functionality
-    var sidemenu = document.getElementById("sidemenu");
-    window.openmenu = function () {
-        sidemenu.style.right = "0";
-    }
-    window.closemenu = function () {
-        sidemenu.style.right = "-200px";
-    }
 
     // Contact form submission
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwiLWrrw0vHJibDJbfX6gKhZKuHJh0Y3_RC3Mq18NLV1C7xE2sqJ3DU_PZ5CdCFg5Fn/exec';

@@ -1,36 +1,41 @@
 @media only screen and (max-width: 600px) {
-  
+
   /* FIX 1: Restore a safe header height to prevent content clipping */
   #header {
-      height: 75vh; 
+    /* Reduced from 75vh to 65vh to be less overwhelming on small screens */
+    height: 65vh;
   }
 
   /* FIX 2: Push the header content down to clear the navigation bar */
   .header-text {
-    margin-top: 15%; 
+    /* CHANGED: Replaced margin-top: 15% with a fixed/viewport unit (e.g., 20vh or 100px) */
+    /* I'm using 20vh to keep it relative to the viewport height for responsiveness */
+    margin-top: 20vh;
     font-size: 16px;
     color: #fff;
   }
 
   .header-text h1 {
     font-size: 30px;
-    margin-top: 5px; 
-  }
-  
-  /* FIX 3: Shrink icons to fit three side-by-side comfortably */
-  .intro-icons-container {
-      /* Keep left-aligned */
-      justify-content: flex-start; 
-      gap: 15px; 
-      margin-bottom: 10px;
+    margin-top: 5px;
   }
 
-  .intro-icon-video, .intro-icon {
-      width: 60px; /* Safer size for three side-by-side on mobile */
-      height: 60px;
-      border-radius: 50%;
+  /* FIX 3: Shrink icons to fit three side-by-side comfortably */
+  .intro-icons-container {
+    /* Keep left-aligned */
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 10px;
   }
-  
+
+  .intro-icon-video,
+  .intro-icon {
+    width: 60px;
+    /* Safer size for three side-by-side on mobile */
+    height: 60px;
+    border-radius: 50%;
+  }
+
   /* The rest of your existing responsive styles are included below */
 
   .whatsapp-float {
@@ -38,7 +43,7 @@
     height: 28px;
   }
 
-  nav > .fa-solid {
+  nav>.fa-solid {
     display: block;
     font-size: 25px;
     color: #fff;
@@ -106,93 +111,94 @@
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1200px) {
-    
-    /* Header Container Height: Adjusted down from 100vh to fit better */
-    #header {
-        height: 85vh; 
-    }
-    
-    /* Header Text (Name and Role): Reduced font size for better fit */
-    .header-text h1 {
-        font-size: 45px;
-    }
 
-    /* Animated Icons: Reduced size slightly to accommodate tighter space */
-    .intro-icon-video, .intro-icon {
-        width: 70px;
-        height: 70px;
-    }
-    
-    /* Portfolio Grid: Adjusted to prevent horizontal scroll issues */
-    .work-list {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-gap: 30px;
-    }
+  /* Header Container Height: Adjusted down from 100vh to fit better */
+  #header {
+    height: 85vh;
+  }
+
+  /* Header Text (Name and Role): Reduced font size for better fit */
+  .header-text h1 {
+    font-size: 45px;
+  }
+
+  /* Animated Icons: Reduced size slightly to accommodate tighter space */
+  .intro-icon-video,
+  .intro-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  /* Portfolio Grid: Adjusted to prevent horizontal scroll issues */
+  .work-list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    #header {
-        height: 80vh;
-    }
+  #header {
+    height: 80vh;
+  }
 
-    .header-text {
-        margin-top: 10%;
-        font-size: 24px;
-    }
+  .header-text {
+    margin-top: 10%;
+    font-size: 24px;
+  }
 
-    .header-text h1 {
-        font-size: 45px;
-    }
+  .header-text h1 {
+    font-size: 45px;
+  }
 
-    .intro-icon-video,
-    .intro-icon {
-        width: 80px;
-        height: 80px;
-    }
+  .intro-icon-video,
+  .intro-icon {
+    width: 80px;
+    height: 80px;
+  }
 
-    .container {
-        padding: 10px 5%;
-    }
+  .container {
+    padding: 10px 5%;
+  }
 
-    .sub-title {
-        font-size: 45px;
-    }
+  .sub-title {
+    font-size: 45px;
+  }
 
-    .about-col-2 {
-        font-size: 15px;
-    }
+  .about-col-2 {
+    font-size: 15px;
+  }
 
-    .services-list div h2 {
-        font-size: 28px;
-    }
+  .services-list div h2 {
+    font-size: 28px;
+  }
 
-    .services-list div p {
-        font-size: 14px;
-    }
+  .services-list div p {
+    font-size: 14px;
+  }
 
-    .services-list {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
+  .services-list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 
-    .work-list {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    }
+  .work-list {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
 
-    .layer h3 {
-        font-size: 20px;
-    }
+  .layer h3 {
+    font-size: 20px;
+  }
 
-    .layer p {
-        font-size: 15px;
-    }
+  .layer p {
+    font-size: 15px;
+  }
 
-    form input,
-    form textarea {
-        font-size: 16px;
-    }
+  form input,
+  form textarea {
+    font-size: 16px;
+  }
 
-    .contact-left,
-    .contact-right {
-        flex-basis: 48%;
-    }
+  .contact-left,
+  .contact-right {
+    flex-basis: 48%;
+  }
 }
