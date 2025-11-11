@@ -25,6 +25,8 @@
   .intro-icon-video, .intro-icon {
       width: 45px; /* Smaller size for mobile screens */
       height: 45px;
+      border-radius: 50%;
+
   }
 
   nav .fa-solid {
