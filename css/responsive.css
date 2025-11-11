@@ -102,38 +102,63 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .work-list {
-    grid-template-columns: 1fr;
-  }
-
-    .whatsapp-float {
-    width: 28px;
-    height: 28px;
-  }
-
-  /* RESPONSIVE: Shrink video size for mobile */
-  .intro-icons-container {
-      /* ADD: Ensure mobile layout is also left-aligned */
-      justify-content: flex-start; 
-      gap: 15px; /* Reduce gap between videos */
-      margin-bottom: 10px; /* Reduce margin on mobile */
-  }
-
-  .intro-icon-video, .intro-icon {
-      width: 100px; /* Smaller size for mobile screens */
-      height: 100px;
-      border-radius: 50%;
-
-  }
-
+/* NEW MEDIA QUERY: For tablets and large phones in landscape mode */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    
+    /* 1. Header Height Adjustment: Make header shorter than desktop (100vh) */
     #header {
-      height: 70vh; 
-  }
+        height: 75vh; 
+    }
 
-   .headeer-text h1 {
-    font-size: 30px;
-    margin-top: 35%;
-  }
+    /* 2. Header Text Position: Center the text content vertically */
+    .headeer-text {
+        margin-top: 20%; /* Pushes text down from the top navigation */
+    }
 
+    /* 3. Icons Sizing: Keep them medium-sized */
+    .intro-icons-container {
+        gap: 25px; 
+    }
+    
+    .intro-icon-video, .intro-icon {
+        width: 70px; /* Smaller than desktop's 80px */
+        height: 70px;
+    }
+    
+    /* 4. Font Sizing: Ensure titles are not too large */
+    .headeer-text h1 {
+        font-size: 50px;
+    }
+    
+    /* 5. About Section Fix: Ensure side-by-side columns work */
+    /* If the columns (image and text) are side-by-side but crowded, make them stack vertically on medium screens too */
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    /* 6. Navigation: Ensure the mobile menu toggle is hidden and desktop menu is used */
+    nav .fa-solid {
+        display: none;
+    }
+
+    nav ul {
+        /* Ensure desktop menu list items are displayed inline */
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        padding-top: 0;
+        right: 0;
+    }
+    nav ul li {
+        display: inline-block;
+        margin: 10px 20px;
+    }
+    
+    /* You may need to add similar rules for services/portfolio grids if they break */
 }
