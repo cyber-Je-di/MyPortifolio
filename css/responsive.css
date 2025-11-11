@@ -73,3 +73,9 @@
     margin: 5px 0 5px 0;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .work-list {
+    grid-template-columns: 1fr;
+  }
+}
