@@ -33,10 +33,12 @@ var sidemenu = document.getElementById("sidemenu");
 // Check if sidemenu element exists before defining functions that use it
 if (sidemenu) {
     window.openmenu = function () {
-        sidemenu.style.right = "0";
+        // Correct position to show the menu
+        sidemenu.style.right = "0"; 
     }
     window.closemenu = function () {
-        sidemenu.style.right = "-200px";
+        // Correct position to hide the menu (must match the responsive CSS hide position)
+        sidemenu.style.right = "-250px"; 
     }
 }
 // ----------------------------------------------------------------------

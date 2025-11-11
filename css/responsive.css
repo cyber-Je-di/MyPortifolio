@@ -8,8 +8,7 @@
 
   /* FIX 2: Push the header content down to clear the navigation bar */
   .header-text {
-    /* CHANGED: Replaced margin-top: 15% with a fixed/viewport unit (e.g., 20vh or 100px) */
-    /* I'm using 20vh to keep it relative to the viewport height for responsiveness */
+    /* Changed to reliable vh unit */
     margin-top: 20vh;
     font-size: 16px;
     color: #fff;
@@ -47,13 +46,17 @@
     display: block;
     font-size: 25px;
     color: #fff;
+    /* FIX: Ensure the hamburger icon is highly visible and clickable */
+    position: relative; 
+    z-index: 5;
   }
 
   nav ul {
     background: #ff004f;
     position: fixed;
     top: 0;
-    right: -200px;
+    /* FIX: Push further right to ensure NO red line peeks from the edge */
+    right: -250px; 
     width: 200px;
     height: 100vh;
     padding-top: 50px;
