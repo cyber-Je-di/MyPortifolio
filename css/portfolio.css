@@ -3,8 +3,9 @@
 }
 
 .work-list {
+  /* UPDATED: Increased min-width from 300px to 350px for larger cards */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
   grid-gap: 50px;
   margin-top: 50px;
 }
@@ -70,4 +71,6 @@
 
 .work:hover {
   box-shadow: 0 0 20px #ff004f;
+}
+
 }
