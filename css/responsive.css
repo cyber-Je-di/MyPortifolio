@@ -13,19 +13,19 @@
   .headeer-text h1 {
     font-size: 30px;
   }
-/* Styling for the Animated Introduction Video (replaces .intro-icon) */
-.intro-icon-video {
-    width: 80px; /* Slightly larger for better video quality */
-    height: 80px;
-}
-.intro-icon{
-    width: 80px;
-    height: 80px;
-}
 
-.intro-icons-container {
-    gap: 10px; /* Space between the videos */
-}
+/* RESPONSIVE: Shrink video size for mobile */
+  .intro-icons-container {
+      /* ADD: Ensure mobile layout is also left-aligned */
+      justify-content: flex-start; 
+      gap: 15px; /* Reduce gap between videos */
+      margin-bottom: 10px; /* Reduce margin on mobile */
+  }
+
+  .intro-icon-video, .intro-icon {
+      width: 45px; /* Smaller size for mobile screens */
+      height: 45px;
+  }
 
   nav .fa-solid {
     display: block;
@@ -102,17 +102,4 @@
     height: 28px;
   }
 
-/* Styling for the Animated Introduction Video (replaces .intro-icon) */
-.intro-icon-video {
-    width: 80px; /* Slightly larger for better video quality */
-    height: 80px;
-}
-.intro-icon{
-    width: 80px;
-    height: 80px;
-}
-
-.intro-icons-container {
-    gap: 10px; /* Space between the videos */
-}
 }

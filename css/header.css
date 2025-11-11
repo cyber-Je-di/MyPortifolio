@@ -84,38 +84,28 @@ nav ul li a:hover::after {
   color: #ff004f;
 }
 
-/* NEW: Styling for the container to hold the three videos */
+/* NEW: Styling for the container to hold the three videos (Desktop Default) */
 .intro-icons-container {
     display: flex;
-    justify-content: center; /* Centers the videos horizontally */
+    /* CHANGE: Align to the start (left) */
+    justify-content: flex-start; 
     align-items: center;
-    gap: 20px; /* Space between the videos */
-    margin-bottom: 10px;
+    gap: 30px; /* Good spacing for desktop */
+    margin-bottom: 20px;
     position: relative;
     z-index: 10;
-    padding: 15px;
+    /* ADD: Ensure the container uses the full width for proper left alignment */
+    width: 100%; 
 }
-/* NEW: Styling for the Animated Introduction Icon */
-.intro-icon {
-    width: 200px; /* Large enough to be seen */
-    height: 200px;
-    display: block; 
-    margin-left: 0; /* Center the icon */
-    margin-right: auto; /* Center the icon */
-    /* Ensure the icon is above the particles.js layer */
-    position: relative; 
-    z-index: 10;
-    padding: 10px;
-}
-/* NEW: Styling for the individual video elements */
-.intro-icon-video {
-    width: 200px; /* Smaller size for three side-by-side */
-    height: 200px;
-    background-color: transparent; 
-    border-radius: 5px; 
-    /* Set max width to ensure they shrink on very small screens */
-    max-width: 100%; 
-    padding: 10px;
+
+/* The individual video/icon styles below remain the same: */
+.intro-icon-video, .intro-icon {
+    width: 150px;
+    height: 150px;
+    background-color: transparent;
+    border-radius: 50%;
+    max-width: 100%;
+    pointer-events: none; 
 }
 
 @keyframes slideInLeft {
