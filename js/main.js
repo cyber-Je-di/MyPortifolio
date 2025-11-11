@@ -37,7 +37,7 @@ if (sidemenu) {
         sidemenu.style.right = "0"; 
     }
     window.closemenu = function () {
-        // Correct position to hide the menu (must match the responsive CSS hide position)
+        // FIX: Hides the menu completely by pushing it off-screen to the right
         sidemenu.style.right = "-250px"; 
     }
 }

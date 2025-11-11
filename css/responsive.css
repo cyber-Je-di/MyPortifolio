@@ -46,7 +46,7 @@
     display: block;
     font-size: 25px;
     color: #fff;
-    /* FIX: Ensure the hamburger icon is highly visible and clickable */
+    /* Hamburger Icon */
     position: relative; 
     z-index: 5;
   }
@@ -61,7 +61,7 @@
     height: 100vh;
     padding-top: 50px;
     margin-top: 0;
-    z-index: 2;
+    z-index: 3; /* Increased Z-index to ensure visibility */
     transition: right 0.5s;
   }
 
@@ -69,13 +69,32 @@
     display: block;
     margin: 25px;
   }
-
+  
+  /* 💥 FIX: Target the X-mark icon directly 
+   * It needs to be styled as a child of NAV UL, not NAV UL LI.
+   * However, since your HTML wraps the icon in an <li>, we will target it there 
+   * but change the positioning relative to the nav ul.
+   */
+  nav ul li:last-child {
+      /* This is the <li> containing the X icon */
+      /* Set display to inline or none so it doesn't take up space like a menu link */
+      display: none; 
+  }
+  
+  /* FIX: Target the X-mark icon with a special class/selector if possible, 
+   * but since it's the only direct fa-solid child inside nav ul, this works:
+   */
   nav ul .fa-solid {
     position: absolute;
-    top: 25px;
-    left: 25px;
+    top: 20px; 
+    left: 20px;
+    font-size: 30px;
+    color: #fff; 
     cursor: pointer;
+    /* Ensure this icon is NOT display: none; which may be set by a previous style */
+    display: block;
   }
+
 
   .sub-title {
     font-size: 40px;
