@@ -35,8 +35,8 @@
   }
 
   .intro-icon-video, .intro-icon {
-      width: 45px; /* Smaller size for mobile screens */
-      height: 45px;
+      width: 100px; /* Smaller size for mobile screens */
+      height: 100px;
       border-radius: 50%;
 
   }
