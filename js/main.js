@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
         sidemenu.style.right = "0";
     }
     window.closemenu = function () {
-        sidemenu.style.right = "-500px";
+        sidemenu.style.right = "-200px";
     }
 
     // Contact form submission

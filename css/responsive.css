@@ -6,13 +6,13 @@
   }
 
   /* FIX 2: Push the header content down to clear the navigation bar */
-  .headeer-text {
+  .header-text {
     margin-top: 15%; 
     font-size: 16px;
     color: #fff;
   }
 
-  .headeer-text h1 {
+  .header-text h1 {
     font-size: 30px;
     margin-top: 5px; 
   }
@@ -38,7 +38,7 @@
     height: 28px;
   }
 
-  nav .fa-solid {
+  nav > .fa-solid {
     display: block;
     font-size: 25px;
     color: #fff;
@@ -48,25 +48,24 @@
     background: #ff004f;
     position: fixed;
     top: 0;
-    right: -500px;
-    width: 100px;
+    right: -200px;
+    width: 200px;
     height: 100vh;
     padding-top: 50px;
     margin-top: 0;
     z-index: 2;
-    transition: right 0.8s;
+    transition: right 0.5s;
   }
 
   nav ul li {
     display: block;
     margin: 25px;
-    margin-left: 0;
   }
 
   nav ul .fa-solid {
     position: absolute;
     top: 25px;
-    left: 38px;
+    left: 25px;
     cursor: pointer;
   }
 
@@ -97,6 +96,10 @@
     flex-basis: 100%;
   }
 
+  .work-list {
+    grid-template-columns: 1fr;
+  }
+
   .copyright {
     font-size: 14px;
   }
@@ -110,7 +113,7 @@
     }
     
     /* Header Text (Name and Role): Reduced font size for better fit */
-    .headeer-text h1 {
+    .header-text h1 {
         font-size: 45px;
     }
 
@@ -124,5 +127,72 @@
     .work-list {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 30px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #header {
+        height: 80vh;
+    }
+
+    .header-text {
+        margin-top: 10%;
+        font-size: 24px;
+    }
+
+    .header-text h1 {
+        font-size: 45px;
+    }
+
+    .intro-icon-video,
+    .intro-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .container {
+        padding: 10px 5%;
+    }
+
+    .sub-title {
+        font-size: 45px;
+    }
+
+    .about-col-2 {
+        font-size: 15px;
+    }
+
+    .services-list div h2 {
+        font-size: 28px;
+    }
+
+    .services-list div p {
+        font-size: 14px;
+    }
+
+    .services-list {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .work-list {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    .layer h3 {
+        font-size: 20px;
+    }
+
+    .layer p {
+        font-size: 15px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 16px;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 48%;
     }
 }
