@@ -1,7 +1,36 @@
+// main.js
+
+// ----------------------------------------------------------------------
+// 1. TAB FUNCTIONALITY (MUST BE IN THE GLOBAL SCOPE)
+// ----------------------------------------------------------------------
+window.opentab = function (tabname, ele) { 
+    // Query for the element collections inside the function on every click.
+    const tablinks = document.querySelectorAll(".tab-links");
+    const tabcontents = document.querySelectorAll(".tab-content");
+
+    // Remove 'active-link' from all tab links
+    tablinks.forEach(link => {
+        link.classList.remove("active-link");
+    });
+    
+    // Remove 'active-tab' from all tab contents
+    tabcontents.forEach(content => {
+        content.classList.remove("active-tab");
+    });
+    
+    // Add 'active-link' to the element that was clicked (passed as 'ele')
+    ele.classList.add("active-link");
+    
+    // Add 'active-tab' to the target content div (Education, Experience, or Skills)
+    document.getElementById(tabname).classList.add("active-tab");
+}
+// ----------------------------------------------------------------------
+
+
 document.addEventListener("DOMContentLoaded", function () {
     // Typed.js initialization
     var typedOptions = {
-        strings: ["Tembo", '<span class="mad">Madalitso</span>', 'a Software Developer'],
+        strings: ["", '<span class="mad">Madalitso Tembo</span>', 'a Software Developer'],
         typeSpeed: 100,
         backSpeed: 50,
         backDelay: 1000,
@@ -134,19 +163,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "retina_detect": true
     });
 
-    // Tab functionality
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-content");
-    window.opentab = function (tabname) {
-        for (let tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-        for (let tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
 
     // Sidemenu functionality
     var sidemenu = document.getElementById("sidemenu");
