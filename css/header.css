@@ -64,7 +64,7 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-.headeer-text {
+.header-text {
   font-size: 30px;
   color: #fff;
   animation: slideInLeft 2s forwards 0.2s;
@@ -76,12 +76,12 @@ nav ul li a:hover::after {
   margin-top: 10px;
 }
 
-.headeer-text h1 {
+.header-text h1 {
   font-size: 60px;
   margin-top: 15px;
 }
 
-.headeer-text h1 span {
+.header-text h1 span {
   color: #ff004f;
 }
 
