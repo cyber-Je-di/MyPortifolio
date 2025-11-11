@@ -58,19 +58,23 @@ html {
 /* WhatsApp Floating Button */
 .whatsapp-float {
     position: fixed;
-    width: 60px;
-    height: 60px;
+    width: 28px;
+    height: 28px;
     bottom: 20px;
     right: 20px;
     background-color: #25d366;
     color: #fff;
     border-radius: 50%;
+    padding: 8px;
+    margin: 5px;
     text-align: center;
     font-size: 30px;
     z-index: 1000;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     transition: transform 0.3s;
 }
+
+
 .whatsapp-float:hover {
     transform: scale(1.2);
 }
