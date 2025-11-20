@@ -127,6 +127,11 @@
     grid-template-columns: 1fr;
   }
 
+  .layer {
+    padding: 0 20px;
+    font-size: 15px;
+  }
+
   .copyright {
     font-size: 14px;
   }
