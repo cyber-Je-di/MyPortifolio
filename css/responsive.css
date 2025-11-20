@@ -127,9 +127,35 @@
     grid-template-columns: 1fr;
   }
 
+  .work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  padding: 5px;
+  margin: 5px;
+  height: 280px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.layer p {
+  font-size: 14px;
+  padding: 10px;
+  margin: 7px;
+}
   .layer {
     padding: 0 20px;
     font-size: 15px;
+    justify-content: center;
+    align-items: center;
   }
 
   .copyright {
@@ -160,6 +186,18 @@
   .work-list {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 30px;
+  }
+
+  .layer p {
+  font-size: 14px;
+  padding: 10px;
+  margin: 7px;
+}
+  .layer {
+    padding: 0 20px;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -227,5 +265,17 @@
   .contact-left,
   .contact-right {
     flex-basis: 48%;
+  }
+
+  .layer p {
+  font-size: 14px;
+  padding: 10px;
+  margin: 7px;
+}
+  .layer {
+    padding: 0 20px;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
   }
 }
