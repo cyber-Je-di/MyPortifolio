@@ -3,77 +3,123 @@
 }
 
 .work-list {
-  /* UPDATED: Increased min-width from 300px to 350px for larger cards */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
-  grid-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
   margin-top: 50px;
 }
 
 .work {
-  border-radius: 10px;
+  border-radius: 12px;
   position: relative;
   overflow: hidden;
-  padding: 10px;
-  margin: 10px;
-  height: 300px;
+  padding: 0;
+  margin: 0;
+  min-height: 320px;
   width: 100%;
+  background: #111;
 }
 
 .work img {
   width: 100%;
-  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  transition: transform 0.5s;
+  transition: transform 0.6s ease;
 }
 
+/* Overlay that slides up. Use transform rather than animating height to avoid layout issues */
 .layer {
-  width: 100%;
-  height: 0;
-  color: #fff;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
-  border-radius: 10px;
   position: absolute;
   left: 0;
   bottom: 0;
-  overflow: hidden;
+  width: 100%;
+  max-height: 100%;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.6) 40%, #ff004f 100%);
+  border-radius: 0 0 12px 12px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  padding: 0 40px;
-  text-align: center;
-  font-size: 16px;
-  transition: height 0.5s;
+  align-items: center;
+  text-align: left;
+  padding: 20px 24px;
+  transform: translateY(70%);
+  transition: transform 0.45s cubic-bezier(.16,.84,.44,1);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.layer .content {
+  width: 100%;
+  overflow: auto;
+  max-height: calc(100% - 60px);
 }
 
 .layer h3 {
-  font-weight: 500;
-  margin-bottom: 20px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  color: #fff;
+  font-size: 18px;
+}
+
+.layer p {
+  margin: 0;
+  color: #f7f7f7;
+  line-height: 1.45;
+  font-size: 14px;
 }
 
 .layer a i {
   color: #ff004f;
-  margin-top: 20px;
+  margin-top: 14px;
   text-decoration: none;
-  font-size: 30px;
-  line-height: 60px;
+  font-size: 20px;
+  line-height: 48px;
   background: #fff;
-  width: 60px;
-  height: 60px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   text-align: center;
 }
 
 .work:hover img {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 .work:hover .layer {
-  height: 100%;
+  transform: translateY(0);
 }
 
 .work:hover {
-  box-shadow: 0 0 20px #ff004f;
+  box-shadow: 0 10px 30px rgba(255,0,79,0.12);
+}
+
+/* Ensure the external See more button remains visible */
+.container > .btn {
+  display: inline-block;
+  margin-top: 32px;
+  position: relative;
+  z-index: 5;
+}
+
+/* Make overlay content scrollable when long */
+.layer .content::-webkit-scrollbar {
+  width: 8px;
+}
+.layer .content::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 6px;
+}
+
+/* TryHackMe iframe default styling moved here for convenience */
+.tryhackme-frame {
+  width: 320px;
+  max-width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  border: none;
+  margin-left: 20px;
+  align-self: center;
 }
 
