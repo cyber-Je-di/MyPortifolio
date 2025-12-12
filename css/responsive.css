@@ -163,10 +163,22 @@
     transform: translateY(55%);
   }
 
-  .tryhackme-frame {
+  .tryhackme-wrap {
     width: 100%;
-    height: 140px;
+    height: auto;
     margin: 18px 0 0 0;
+  }
+
+  /* Ensure TryHackMe badge wrapper does not overlap header content on small screens */
+  .header-container .tryhackme-wrap {
+    position: static;
+    margin: 18px 0 0 0;
+    width: calc(100% - 40px);
+    max-width: 560px;
+    box-shadow: none;
+    border-radius: 6px;
+    overflow: hidden;
+    aspect-ratio: 2 / 1;
   }
 
   .copyright {
@@ -211,10 +223,44 @@
     align-items: center;
   }
 
-  .tryhackme-frame {
+  .tryhackme-wrap {
     width: 320px;
-    height: 160px;
+    height: auto;
   }
+
+/* Medium breakpoint tweaks */
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+  .header-container .tryhackme-wrap {
+    width: clamp(260px, 20vw, 320px);
+    aspect-ratio: 2 / 1;
+    right: 18px;
+    top: 18px;
+  }
+}
+
+/* Large screens keep top-right absolute placement but ensure it doesn't exceed layout */
+@media only screen and (min-width: 1200px) {
+  .header-container .tryhackme-wrap {
+    width: clamp(300px, 30vw, 420px);
+    aspect-ratio: 2 / 1;
+    right: 28px;
+    top: 24px;
+  }
+}
+
+/* Medium screens: slightly larger cards but keep responsiveness */
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  .work-list {
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  }
+  .header-container .tryhackme-frame {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 340px;
+    height: 170px;
+  }
+}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {

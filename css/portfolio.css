@@ -4,7 +4,8 @@
 
 .work-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Increase card min width so each card can fit longer titles/descriptions */
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
 }
@@ -15,14 +16,14 @@
   overflow: hidden;
   padding: 0;
   margin: 0;
-  min-height: 320px;
   width: 100%;
   background: #111;
 }
 
 .work img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 420px;
   object-fit: cover;
   display: block;
   transition: transform 0.6s ease;
@@ -113,13 +114,94 @@
 
 /* TryHackMe iframe default styling moved here for convenience */
 .tryhackme-frame {
-  width: 320px;
+  width: 100%;
   max-width: 100%;
-  height: 160px;
+  height: 100%;
   border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
   border: none;
-  margin-left: 20px;
-  align-self: center;
+  display: block;
+  overflow: hidden; /* prevent iframe element overflow */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.tryhackme-frame::-webkit-scrollbar {
+  display: none;
+}
+
+/* Read more button inside overlay */
+.read-more {
+  margin-top: 12px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Modal styles */
+.project-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.project-modal[aria-hidden="false"] {
+  display: flex;
+}
+.project-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+.project-modal-panel {
+  position: relative;
+  background: #0f0f10;
+  color: #fff;
+  max-width: 900px;
+  width: 92%;
+  max-height: 80vh;
+  overflow: auto;
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  z-index: 2;
+}
+
+/* Animate modal panel on open */
+.project-modal-panel {
+  transform: translateY(10px) scale(.98);
+  opacity: 0;
+}
+.project-modal[aria-hidden="false"] .project-modal-panel {
+  animation: modalOpen 340ms cubic-bezier(.2,.9,.3,1) both;
+}
+@keyframes modalOpen {
+  from {
+    transform: translateY(10px) scale(.98);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+.project-modal-close {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+.project-modal-body {
+  margin-top: 8px;
+  line-height: 1.6;
 }
 

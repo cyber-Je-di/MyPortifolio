@@ -52,7 +52,9 @@
 
           <h1>Hi, I'm <span class="tembo" id="typed"></span></h1>
         </div>
-        <iframe class="tryhackme-frame" src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3595855" style='border:none;' title="TryHackMe badges" loading="lazy"></iframe>
+        <div class="tryhackme-wrap">
+          <iframe class="tryhackme-frame" src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3595855" title="TryHackMe badges" loading="lazy" scrolling="no"></iframe>
+        </div>
       </div>
     </div>
 
@@ -277,6 +279,7 @@
               <a href="https://madalitsot.pythonanywhere.com" target="_blank">
                 <i class="fa-solid fa-up-right-from-square"></i>
               </a>
+              <button class="read-more">Read more</button>
             </div>
           </div>
           <div
@@ -304,6 +307,7 @@
               >
                 <i class="fa-solid fa-up-right-from-square"></i>
               </a>
+              <button class="read-more">Read more</button>
             </div>
           </div>
           <div
@@ -332,6 +336,7 @@
               <a href="https://mysit3.pythonanywhere.com/">
                 <i class="fa-solid fa-up-right-from-square"></i>
               </a>
+              <button class="read-more">Read more</button>
             </div>
           </div>
         </div>
@@ -402,6 +407,16 @@
             <i class="fa-solid fa-trademark"></i>
           </p>
         </div>
+      </div>
+    </div>
+
+    <!-- Modal for Read More -->
+    <div id="project-modal" class="project-modal" aria-hidden="true">
+      <div class="project-modal-backdrop" data-close></div>
+      <div class="project-modal-panel" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" tabindex="-1">
+        <button class="project-modal-close" aria-label="Close">×</button>
+        <h3 id="project-modal-title"></h3>
+        <div id="project-modal-body" class="project-modal-body"></div>
       </div>
     </div>
 

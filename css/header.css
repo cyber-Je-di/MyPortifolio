@@ -24,6 +24,29 @@
     z-index: 1;
 }
 
+/* Position TryHackMe badge wrapper in the top-right of the header container */
+.header-container .tryhackme-wrap {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  /* Responsive width: between 240px and 360px, scaling with viewport */
+  width: clamp(240px, 24vw, 360px);
+  aspect-ratio: 2 / 1; /* keeps badge proportion consistent */
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.22);
+  z-index: 15;
+  overflow: hidden; /* Prevent internal scrollbars from leaking out */
+  display: block;
+}
+
+.header-container .tryhackme-wrap .tryhackme-frame {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+  transform-origin: center center;
+}
+
 nav {
   display: flex;
   align-items: center;

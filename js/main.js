@@ -212,4 +212,88 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollToTop = function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    // Read-more modal handlers with autofocus and simple focus-trap
+    const modal = document.getElementById('project-modal');
+    const modalTitle = document.getElementById('project-modal-title');
+    const modalBody = document.getElementById('project-modal-body');
+    const modalClose = document.querySelector('.project-modal-close');
+    const modalPanel = document.querySelector('.project-modal-panel');
+    let lastActiveElement = null;
+    let modalKeyHandler = null;
+
+    function openProjectModal(title, html) {
+        lastActiveElement = document.activeElement;
+        modalTitle.textContent = title;
+        modalBody.innerHTML = html;
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+
+        // autofocus close button (or panel) for accessibility
+        setTimeout(() => {
+            if (modalClose) modalClose.focus();
+            else if (modalPanel) modalPanel.focus();
+        }, 40);
+
+        // add key handler to trap tab focus and detect Escape
+        modalKeyHandler = function (e) {
+            if (e.key === 'Escape') {
+                closeProjectModal();
+                return;
+            }
+            if (e.key === 'Tab') {
+                const focusable = modal.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, [tabindex]:not([tabindex="-1"])');
+                const focusables = Array.prototype.filter.call(focusable, function (el) {
+                    return el.offsetWidth > 0 || el.offsetHeight > 0 || el === document.activeElement;
+                });
+                if (focusables.length === 0) {
+                    e.preventDefault();
+                    return;
+                }
+                const first = focusables[0];
+                const last = focusables[focusables.length - 1];
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+        };
+        document.addEventListener('keydown', modalKeyHandler);
+    }
+
+    function closeProjectModal() {
+        modal.setAttribute('aria-hidden', 'true');
+        modalTitle.textContent = '';
+        modalBody.innerHTML = '';
+        document.body.style.overflow = '';
+        if (modalKeyHandler) document.removeEventListener('keydown', modalKeyHandler);
+        modalKeyHandler = null;
+        // restore focus
+        if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
+            lastActiveElement.focus();
+        }
+        lastActiveElement = null;
+    }
+
+    // Attach click handlers to all read-more buttons
+    document.querySelectorAll('.read-more').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            const layer = e.currentTarget.closest('.layer');
+            if (!layer) return;
+            const titleEl = layer.querySelector('h3');
+            const contentEl = layer.querySelector('.content');
+            const title = titleEl ? titleEl.textContent.trim() : '';
+            const html = contentEl ? contentEl.innerHTML : '';
+            openProjectModal(title, html);
+        });
+    });
+
+    // Close interactions
+    if (modalClose) modalClose.addEventListener('click', closeProjectModal);
+    modal.addEventListener('click', function (e) {
+        if (e.target.matches('[data-close]') || e.target === modal) closeProjectModal();
+    });
 });
